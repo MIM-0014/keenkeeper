@@ -32,12 +32,12 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="bg-[#244d3f] text-white shadow-md">
+    <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md text-black shadow-md border-b">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <FaUsers className="text-2xl text-green-300" />
+          <FaUsers className="text-2xl text-[#244d3f]" />
           <span className="text-2xl font-bold">
             KeenKeeper
           </span>
@@ -55,10 +55,10 @@ export default function Navbar() {
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-200
                   
                   ${
-                    active
-                      ? "bg-green-400 text-black font-semibold"
-                      : "hover:bg-green-500/20"
-                  }
+  active
+    ? "bg-[#244d3f] text-white font-semibold"
+    : "hover:bg-gray-100 text-gray-700"
+}
                 `}
               >
                 {link.icon}
