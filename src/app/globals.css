@@ -1,7 +1,53 @@
 @import "tailwindcss";
+@import "@heroui/styles"; 
 
 body {
   font-family: Arial, Helvetica, sans-serif;
   background: #f9fafb;
   color: #111827;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  background: white;
+  border-bottom: 1px solid #eee;
+}
+
+.logo-box {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #333;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  background: #f2f2f2;
+}
+
+.nav-link.active {
+  background: #244d3f;
+  color: white;
 }

@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Alex Johnson",
+    "picture": "https://i.pravatar.cc/300?img=11",
+    "email": "alex.johnson@example.com",
+    "days_since_contact": 18,
+    "status": "overdue",
+    "tags": ["college", "close friend"],
+    "bio": "Met during university orientation. We still talk about tech and hiking trips.",
+    "goal": 14,
+    "next_due_date": "2026-06-02"
+  },
+  {
+    "id": 2,
+    "name": "Sarah Mitchell",
+    "picture": "https://i.pravatar.cc/300?img=32",
+    "email": "sarah.mitchell@example.com",
+    "days_since_contact": 5,
+    "status": "on-track",
+    "tags": ["work", "designer"],
+    "bio": "Worked together on several freelance UI/UX projects.",
+    "goal": 10,
+    "next_due_date": "2026-05-28"
+  },
+  {
+    "id": 3,
+    "name": "Daniel Lee",
+    "picture": "https://i.pravatar.cc/300?img=15",
+    "email": "daniel.lee@example.com",
+    "days_since_contact": 11,
+    "status": "almost due",
+    "tags": ["gym", "travel"],
+    "bio": "Travel partner and fitness enthusiast. Always planning the next trip.",
+    "goal": 12,
+    "next_due_date": "2026-05-30"
+  },
+  {
+    "id": 4,
+    "name": "Emily Carter",
+    "picture": "https://i.pravatar.cc/300?img=21",
+    "email": "emily.carter@example.com",
+    "days_since_contact": 3,
+    "status": "on-track",
+    "tags": ["school", "best friend"],
+    "bio": "Known each other since high school. Loves photography and coffee.",
+    "goal": 14,
+    "next_due_date": "2026-06-05"
+  },
+  {
+    "id": 5,
+    "name": "Michael Brown",
+    "picture": "https://i.pravatar.cc/300?img=12",
+    "email": "michael.brown@example.com",
+    "days_since_contact": 20,
+    "status": "overdue",
+    "tags": ["office", "football"],
+    "bio": "Office colleague who never misses a football match discussion.",
+    "goal": 15,
+    "next_due_date": "2026-05-25"
+  },
+  {
+    "id": 6,
+    "name": "Olivia Wilson",
+    "picture": "https://i.pravatar.cc/300?img=45",
+    "email": "olivia.wilson@example.com",
+    "days_since_contact": 9,
+    "status": "almost due",
+    "tags": ["book club", "writer"],
+    "bio": "Met at a local book club. Passionate about storytelling and poetry.",
+    "goal": 10,
+    "next_due_date": "2026-05-31"
+  },
+  {
+    "id": 7,
+    "name": "James Anderson",
+    "picture": "https://i.pravatar.cc/300?img=18",
+    "email": "james.anderson@example.com",
+    "days_since_contact": 2,
+    "status": "on-track",
+    "tags": ["gaming", "childhood"],
+    "bio": "Childhood friend and gaming teammate for years.",
+    "goal": 7,
+    "next_due_date": "2026-05-27"
+  },
+  {
+    "id": 8,
+    "name": "Sophia Martinez",
+    "picture": "https://i.pravatar.cc/300?img=47",
+    "email": "sophia.martinez@example.com",
+    "days_since_contact": 16,
+    "status": "overdue",
+    "tags": ["mentor", "career"],
+    "bio": "Career mentor who helped me improve public speaking skills.",
+    "goal": 14,
+    "next_due_date": "2026-05-24"
+  }
+]
