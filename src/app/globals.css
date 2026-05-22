@@ -51,3 +51,11 @@ body {
   background: #244d3f;
   color: white;
 }
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f3f4f6;
+  color: #111827;
+}

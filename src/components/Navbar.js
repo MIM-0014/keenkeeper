@@ -44,7 +44,7 @@ export default function Navbar() {
         </Link>
 
         {/* Links */}
-        <div className="flex items-center gap-3">
+     <div className="flex items-center gap-2 text-sm md:text-base">
           {navLinks.map((link) => {
             const active = pathname === link.path;
 
