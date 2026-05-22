@@ -1,15 +1,37 @@
-export default function TimelineEntry({ date, title, description }) {
+import {
+  FaPhone,
+  FaCommentDots,
+  FaVideo,
+} from "react-icons/fa";
+
+export default function TimelineEntry({ item }) {
+  const icons = {
+    Call: <FaPhone className="text-green-600" />,
+    Text: <FaCommentDots className="text-blue-600" />,
+    Video: <FaVideo className="text-purple-600" />,
+  };
+
   return (
-    <div className="flex gap-4 mb-8">
-      <div className="flex flex-col items-center">
-        <div className="w-4 h-4 bg-blue-600 rounded-full mt-2"></div>
-        <div className="w-1 h-20 bg-blue-200 mt-2"></div>
+    <div className="bg-white rounded-2xl shadow-md p-6 flex items-center gap-5">
+
+      {/* Icon */}
+      <div className="text-2xl bg-gray-100 p-4 rounded-full">
+        {icons[item.type]}
       </div>
-      <div className="pb-8">
-        <p className="text-sm text-gray-500">{date}</p>
-        <h4 className="text-lg font-semibold text-gray-800 mt-1">{title}</h4>
-        <p className="text-gray-600 mt-2">{description}</p>
+
+      {/* Content */}
+      <div className="flex-1">
+
+        <h3 className="text-xl font-semibold mb-1">
+          {item.title}
+        </h3>
+
+        <p className="text-gray-500">
+          📅 {item.date}
+        </p>
+
       </div>
+
     </div>
   );
 }
