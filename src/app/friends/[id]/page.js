@@ -15,7 +15,7 @@ import {
 
 import toast from "react-hot-toast";
 
-import { notFound } from "next/navigation";
+
 
 import { useTimeline } from "@/context/TimelineContext";
 
@@ -30,10 +30,17 @@ export default function FriendDetailsPage() {
 
   const { addTimelineEvent } = useTimeline();
 
-  if (!friend) {
-    notFound();
-  }
+ if (!params?.id) {
+  return null;
+}
 
+if (!friend) {
+  return (
+    <div className="min-h-screen flex items-center justify-center text-2xl font-bold">
+      Friend not found
+    </div>
+  );
+}
   const statusColors = {
     overdue: "bg-red-100 text-red-600",
     "almost due": "bg-yellow-100 text-yellow-700",
