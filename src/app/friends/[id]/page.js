@@ -1,6 +1,7 @@
 "use client";
 
-import { use } from "react";
+import { useParams } from "next/navigation";
+
 import friends from "@/data/friends.json";
 
 import {
@@ -12,17 +13,19 @@ import {
   FaTrash,
 } from "react-icons/fa";
 
-import { notFound } from "next/navigation";
-
 import toast from "react-hot-toast";
+
+import { notFound } from "next/navigation";
 
 import { useTimeline } from "@/context/TimelineContext";
 
-export default function FriendDetailsPage({ params }) {
-  const { id } = use(params);
+export default function FriendDetailsPage() {
+  const params = useParams();
+
+  const id = parseInt(params.id);
 
   const friend = friends.find(
-    (f) => f.id === parseInt(id)
+    (f) => f.id === id
   );
 
   const { addTimelineEvent } = useTimeline();
@@ -48,26 +51,26 @@ export default function FriendDetailsPage({ params }) {
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
 
-        {/* Left Side */}
+        {/* Left */}
         <div className="bg-white rounded-3xl shadow-lg p-8">
 
-         <img
-  src={friend.picture}
-  alt={friend.name}
-  className="w-40 h-40 rounded-full object-cover mx-auto mb-6"
-/>
+          <img
+            src={friend.picture}
+            alt={friend.name}
+            className="w-40 h-40 rounded-full object-cover mx-auto mb-6"
+          />
 
-<h1 className="text-3xl font-bold text-center mb-3">
-  {friend.name}
-</h1>
+          <h1 className="text-3xl font-bold text-center mb-3">
+            {friend.name}
+          </h1>
 
-<div className="text-center mb-4">
-  <span
-    className={`px-4 py-2 rounded-full text-sm font-semibold ${statusColors[friend.status]}`}
-  >
-    {friend.status}
-  </span>
-</div>
+          <div className="text-center mb-4">
+            <span
+              className={`px-4 py-2 rounded-full text-sm font-semibold ${statusColors[friend.status]}`}
+            >
+              {friend.status}
+            </span>
+          </div>
 
           <div className="flex flex-wrap justify-center gap-2 mb-6">
             {friend.tags.map((tag, index) => (
@@ -88,31 +91,31 @@ export default function FriendDetailsPage({ params }) {
             {friend.email}
           </p>
 
-          {/* Action Buttons */}
           <div className="space-y-4">
 
-            <button className="w-full flex items-center justify-center gap-2 bg-yellow-100 text-yellow-700 py-3 rounded-xl font-medium hover:opacity-80 transition">
+            <button className="w-full flex items-center justify-center gap-2 bg-yellow-100 text-yellow-700 py-3 rounded-xl font-medium">
               <FaClock />
               Snooze 2 Weeks
             </button>
 
-            <button className="w-full flex items-center justify-center gap-2 bg-blue-100 text-blue-700 py-3 rounded-xl font-medium hover:opacity-80 transition">
+            <button className="w-full flex items-center justify-center gap-2 bg-blue-100 text-blue-700 py-3 rounded-xl font-medium">
               <FaArchive />
               Archive
             </button>
 
-            <button className="w-full flex items-center justify-center gap-2 bg-red-100 text-red-700 py-3 rounded-xl font-medium hover:opacity-80 transition">
+            <button className="w-full flex items-center justify-center gap-2 bg-red-100 text-red-700 py-3 rounded-xl font-medium">
               <FaTrash />
               Delete
             </button>
 
           </div>
+
         </div>
 
-        {/* Right Side */}
+        {/* Right */}
         <div className="lg:col-span-2 space-y-8">
 
-          {/* Stats Cards */}
+          {/* Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
             <div className="bg-white rounded-2xl shadow-md p-6">
@@ -147,25 +150,6 @@ export default function FriendDetailsPage({ params }) {
 
           </div>
 
-          {/* Goal Card */}
-          <div className="bg-white rounded-2xl shadow-md p-8">
-
-            <div className="flex items-center justify-between mb-4">
-              <h2 className="text-2xl font-bold">
-                Relationship Goal
-              </h2>
-
-              <button className="bg-[#244d3f] text-white px-4 py-2 rounded-lg">
-                Edit
-              </button>
-            </div>
-
-            <p className="text-gray-600">
-              Stay connected every {friend.goal} days to maintain a strong friendship.
-            </p>
-
-          </div>
-
           {/* Quick Check-In */}
           <div className="bg-white rounded-2xl shadow-md p-8">
 
@@ -176,30 +160,24 @@ export default function FriendDetailsPage({ params }) {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
 
               <button
-                onClick={() =>
-                  handleInteraction("Call")
-                }
-                className="bg-green-100 text-green-700 py-4 rounded-xl flex items-center justify-center gap-2 font-semibold hover:scale-105 transition"
+                onClick={() => handleInteraction("Call")}
+                className="bg-green-100 text-green-700 py-4 rounded-xl flex items-center justify-center gap-2 font-semibold"
               >
                 <FaPhone />
                 Call
               </button>
 
               <button
-                onClick={() =>
-                  handleInteraction("Text")
-                }
-                className="bg-blue-100 text-blue-700 py-4 rounded-xl flex items-center justify-center gap-2 font-semibold hover:scale-105 transition"
+                onClick={() => handleInteraction("Text")}
+                className="bg-blue-100 text-blue-700 py-4 rounded-xl flex items-center justify-center gap-2 font-semibold"
               >
                 <FaCommentDots />
                 Text
               </button>
 
               <button
-                onClick={() =>
-                  handleInteraction("Video")
-                }
-                className="bg-purple-100 text-purple-700 py-4 rounded-xl flex items-center justify-center gap-2 font-semibold hover:scale-105 transition"
+                onClick={() => handleInteraction("Video")}
+                className="bg-purple-100 text-purple-700 py-4 rounded-xl flex items-center justify-center gap-2 font-semibold"
               >
                 <FaVideo />
                 Video

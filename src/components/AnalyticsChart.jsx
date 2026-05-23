@@ -22,10 +22,9 @@ export default function AnalyticsChart({ data }) {
       <h2 className="text-3xl font-bold mb-8">
         Friendship Analytics
       </h2>
+<div className="w-full min-h-[400px]">
 
-      <div className="w-full h-[400px]">
-
-        <ResponsiveContainer width="100%" height="100%">
+       <ResponsiveContainer width="100%" height={400}>
 
           <PieChart>
 
