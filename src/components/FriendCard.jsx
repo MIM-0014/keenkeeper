@@ -8,7 +8,7 @@ export default function FriendCard({ friend }) {
   };
 
   return (
-    <Link href={`/friends/${friend.id}`}>
+   <Link href={`/friend?id=${friend.id}`}>
       <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition overflow-hidden cursor-pointer group">
 
         {/* Image */}
