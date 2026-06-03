@@ -6,7 +6,7 @@ KeenKeeper is a friendship management web application designed to help users mai
 
 Live Site:https://keenkeeper-jet.vercel.app/
 
-GitHub Repository: 
+GitHub Repository: https://github.com/MIM-0014/keenkeeper.git
 
 ---
 
