@@ -1,6 +1,6 @@
 "use client";
 
-import { useSearchParams } from "next/navigation";
+import { useParams } from "next/navigation";
 
 import friends from "@/data/friends.json";
 
@@ -18,9 +18,9 @@ import toast from "react-hot-toast";
 import { useTimeline } from "@/context/TimelineContext";
 
 export default function FriendPage() {
-  const searchParams = useSearchParams();
+  const params = useParams();
 
-  const id = parseInt(searchParams.get("id"));
+  const id = parseInt(params.id);
 
   const friend = friends.find((f) => f.id === id);
 
