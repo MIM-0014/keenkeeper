@@ -51,7 +51,7 @@ KeenKeeper helps users keep track of their friendships by monitoring when they l
 
 ---
 
- 📱 Responsive Design
+ Responsive Design
 
 The application is fully responsive and optimized for:
 
